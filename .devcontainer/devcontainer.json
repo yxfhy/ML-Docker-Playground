@@ -12,8 +12,22 @@
     "-v",
     "${localEnv:HOME}/.gitconfig:/etc/gitconfig:ro"
   ],  // 既存プロパティ …,
-    "customizations": {
+  "customizations": {
       "vscode": {
+          //"ms-python.black-formatter", "ms-python.isort",
+          // 下記のようにstting.jsonを指定することで、balckやisortが保存時に自動で実行されるようになる
+          //     "[python]": {
+          //     "editor.defaultFormatter": "ms-python.black-formatter",
+          //     "editor.formatOnSave": true,
+          //     "editor.codeActionsOnSave": {
+          //         "source.organizeImports": "explicit"
+          //     }
+          // },
+          // "isort.args": [
+          //     "--profile",
+          //     "black"
+          // ],
+        
         "extensions": [
           "ms-python.python",
           "ms-python.black-formatter",

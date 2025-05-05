@@ -9,3 +9,13 @@ RUN apt-get update \
  && rm -rf /var/lib/apt/lists/*
 
 
+# ───────────────────────────────
+# 2) Node.js 18.x をインストール
+#    curl がなければ先に導入し、NodeSource のセットアップスクリプトで nodejs を追加します。
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends curl \
+ && curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
+ && apt-get install -y --no-install-recommends nodejs \
+ && rm -rf /var/lib/apt/lists/*
+
+ 

@@ -31,8 +31,8 @@
     docker-compose up
     ```
 
-4. VS Codeの設定を`settings.json`に追加:
-*** コンテナのパイソンのversionが古い場合にはフォーマッターは自動起動しないので注意 ***
+4. VS Codeの設定を`settings.json`に追加:　　
+
     ```json
     {
         "[python]": {
@@ -49,7 +49,7 @@
     }
     ```
 
-5. 必要に応じてVS Codeの設定を適用。
+5. 必要に応じてVS Codeの設定を適用。**コンテナのパイソンのversionが古い場合にはフォーマッターは自動起動しないので注意**
 
 ## 使い方
 

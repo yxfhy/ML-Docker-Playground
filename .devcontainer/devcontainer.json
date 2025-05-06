@@ -32,7 +32,10 @@
           "ms-python.python",
           "ms-python.black-formatter",
           "ms-python.isort",
-          "ms-python.flake8"
+          "ms-python.flake8",
+          "GitHub.copilot",
+          "GitHub.copilot-chat",
+          "ms-toolsai.jupyter"
         ]
       }
     },

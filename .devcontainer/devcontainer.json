@@ -36,6 +36,7 @@
           "GitHub.copilot",
           "GitHub.copilot-chat",
           "ms-toolsai.jupyter"
+          "ms-python.debugpy"
         ]
       }
     },

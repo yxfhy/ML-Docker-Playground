@@ -1,0 +1,33 @@
+[
+    {
+      "id": 101,
+      "name": "Alice",
+      "age": "25",
+      "signup_date": "2023-04-15"
+    },
+    {
+      "id": "102",
+      "name": "Bob",
+      "age": 17,
+      "signup_date": "2024-03-01"
+    },
+    {
+      "id": 103,
+      "name": "Charlie",
+      "age": "invalid",
+      "signup_date": "2022-12-30"
+    },
+    {
+      "id": 104,
+      "name": "Diana",
+      "age": "30",
+      "signup_date": "not_a_date"
+    },
+    {
+      "id": 105,
+      "name": "Eve",
+      "age": 40,
+      "signup_date": "2020-01-10"
+    }
+  ]
+  

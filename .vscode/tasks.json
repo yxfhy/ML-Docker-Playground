@@ -1,20 +1,49 @@
 {
-    // See https://go.microsoft.com/fwlink/?LinkId=733558
-    // for the documentation about the tasks.json format
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "label": "run-main",
-            "type": "process",
-            "command": "python",
-            "args": [
-                "main.py"
-            ],
-            "problemMatcher": [],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
-        }
-    ]
+  "version": "2.0.0",
+  "tasks": [
+    {
+        "label": "format-black",
+        "type": "process",
+        "command": "black",
+        "args": [
+            "."
+        ],
+        "problemMatcher": [],
+        "group": "build"
+    },
+    {
+        "label": "format-isort",
+        "type": "process",
+        "command": "isort",
+        "args": [
+            "."
+        ],
+        "problemMatcher": [],
+        "group": "build"
+    },
+    {
+        "label": "exec-main",
+        "type": "process",
+        "command": "python",
+        "args": [
+            "main.py"
+        ],
+        "problemMatcher": [],
+        "group": "build"
+    },
+    {
+        "label": "run-main",
+        "dependsOn": [
+            "format-black",
+            "format-isort",
+            "exec-main"
+        ],
+        "dependsOrder": "sequence",
+        "group": {
+            "kind": "build",
+            "isDefault": true
+        },
+        "problemMatcher": []
+    }
+]
 }

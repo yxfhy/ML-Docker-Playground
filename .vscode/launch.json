@@ -9,7 +9,20 @@
         "cwd": "${workspaceFolder}",
         "justMyCode": false,
         "envFile": "${workspaceFolder}/.env"
-      }
+      },
+      {
+            "type": "python",
+            "request": "attach",
+            "name": "FastAPI Remote Debug",
+            "port": 5678,
+            "host": "localhost",
+            "pathMappings": [
+                {
+                    "localRoot": "${workspaceFolder}",
+                    "remoteRoot": "${workspaceFolder}"
+                }
+            ]
+        }
     ]
   }
   

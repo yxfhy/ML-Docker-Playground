@@ -24,3 +24,11 @@ RUN pip install --no-cache-dir openai
 RUN pip install  --no-cache-dir uvicorn
 RUN pip install  --no-cache-dir fastapi
 RUN pip install  --no-cache-dir python-multipart
+RUN pip install  --no-cache-dir debugpy
+
+ 
+
+
+EXPOSE 8000
+EXPOSE 5678
+CMD ["python3", "-m", "debugpy", "--listen", "0.0.0.0:5678", "-m", "uvicorn", "app:app", "--reload", "--host", "0.0.0.0", "--port", "8000"]

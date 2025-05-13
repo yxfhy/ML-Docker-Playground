@@ -7,6 +7,11 @@ import os
 from dotenv import load_dotenv
 
 
+def process_parameters(param1: str, param2: str, param3: str) -> str:
+    # Process the parameters and return a result
+    return f"Processed parameters: {param1}, {param2}, {param3}"
+
+
 def main():
 
     # 引数のパース

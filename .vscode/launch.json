@@ -21,7 +21,8 @@
                     "localRoot": "${workspaceFolder}",
                     "remoteRoot": "${workspaceFolder}"
                 }
-            ]
+            ],
+            "preLaunchTask": "debug-uvicorn"
         }
     ]
   }

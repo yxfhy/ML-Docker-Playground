@@ -1,49 +1,71 @@
 {
   "version": "2.0.0",
-  "tasks": [
+"tasks": [
     {
-        "label": "format-black",
-        "type": "process",
-        "command": "black",
-        "args": [
-            "."
-        ],
-        "problemMatcher": [],
-        "group": "build"
+            "label": "format-black",
+            "type": "process",
+            "command": "black",
+            "args": [
+                    "."
+            ],
+            "problemMatcher": [],
+            "group": "build"
     },
     {
-        "label": "format-isort",
-        "type": "process",
-        "command": "isort",
-        "args": [
-            "."
-        ],
-        "problemMatcher": [],
-        "group": "build"
+            "label": "format-isort",
+            "type": "process",
+            "command": "isort",
+            "args": [
+                    "."
+            ],
+            "problemMatcher": [],
+            "group": "build"
     },
     {
-        "label": "exec-main",
-        "type": "process",
-        "command": "python",
-        "args": [
-            "main.py"
-        ],
-        "problemMatcher": [],
-        "group": "build"
+            "label": "exec-main",
+            "type": "process",
+            "command": "python",
+            "args": [
+                    "main.py"
+            ],
+            "problemMatcher": [],
+            "group": "build"
     },
     {
-        "label": "run-main",
-        "dependsOn": [
-            "format-black",
-            "format-isort",
-            "exec-main"
-        ],
-        "dependsOrder": "sequence",
-        "group": {
-            "kind": "build",
-            "isDefault": true
-        },
-        "problemMatcher": []
+            "label": "run-main",
+            "dependsOn": [
+                    "format-black",
+                    "format-isort",
+                    "exec-main"
+            ],
+            "dependsOrder": "sequence",
+            "group": {
+                    "kind": "build",
+                    "isDefault": true
+            },
+            "problemMatcher": []
+    },
+    {
+            "label": "debug-uvicorn",
+            "type": "process",
+            "command": "python3",
+            "args": [
+                    "-m",
+                    "debugpy",
+                    "--listen",
+                    "0.0.0.0:5678",
+                    "--wait-for-client",
+                    "-m",
+                    "uvicorn",
+                    "app:app",
+                    "--reload",
+                    "--host",
+                    "0.0.0.0",
+                    "--port",
+                    "8000"
+            ],
+            "problemMatcher": [],
+            "group": "build"
     }
 ]
 }

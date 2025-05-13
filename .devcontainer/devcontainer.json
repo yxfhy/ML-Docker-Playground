@@ -13,6 +13,8 @@
     "${localEnv:HOME}/.gitconfig:/etc/gitconfig:ro",
     "--publish",
     "5678:5678",
+    "--name",
+    "ml-full"
   ], // 既存プロパティ …,
   "forwardPorts": [
     // VSCode が自動でポートフォワードしてくれる設定
@@ -41,7 +43,8 @@
         "ms-python.flake8",
         "GitHub.copilot",
         "GitHub.copilot-chat",
-        "ms-toolsai.jupyter""ms-python.debugpy"
+        "ms-toolsai.jupyter",
+        "ms-python.debugpy"
       ]
     }
   },

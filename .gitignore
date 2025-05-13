@@ -1,0 +1,29 @@
+# Python specific
+__pycache__/
+*.py[cod]
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Environment files
+.env
+.venv/
+
+# Data files
+*.csv
+*.json
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# VSCode specific
+.vscode/
+
+.ipynb
+
+result.md
+select.html

@@ -19,3 +19,8 @@ RUN apt-get update \
  && rm -rf /var/lib/apt/lists/*
 
  RUN pip install --no-cache-dir python-dotenv
+ # 追加：openai パッケージをインストール
+RUN pip install --no-cache-dir openai
+RUN pip install  --no-cache-dir uvicorn
+RUN pip install  --no-cache-dir fastapi
+RUN pip install  --no-cache-dir python-multipart

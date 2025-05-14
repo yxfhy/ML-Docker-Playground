@@ -1,29 +1,26 @@
 {
-    "version": "0.2.0",
-    "configurations": [
-      {
-        "name": "Playground: main",
-        "type": "python",
-        "request": "launch",
-        "program": "main.py",
-        "cwd": "${workspaceFolder}",
-        "justMyCode": false,
-        "envFile": "${workspaceFolder}/.env"
-      },
-      {
-            "type": "python",
-            "request": "attach",
-            "name": "FastAPI Remote Debug",
-            "port": 5678,
-            "host": "localhost",
-            "pathMappings": [
-                {
-                    "localRoot": "${workspaceFolder}",
-                    "remoteRoot": "${workspaceFolder}"
-                }
-            ],
-            "preLaunchTask": "debug-uvicorn"
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Playground: main",
+      "type": "python",
+      "request": "launch",
+      "program": "main.py",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": false,
+      "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "type": "python",
+      "request": "attach",
+      "name": "FastAPI Remote Debug",
+      "port": 5678,
+      "host": "localhost",
+      "pathMappings": [
+        {
+          "localRoot": "${workspaceFolder}",
+          "remoteRoot": "${workspaceFolder}"
         }
+      }
     ]
   }
-  

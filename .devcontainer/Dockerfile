@@ -1,6 +1,10 @@
 # ベースイメージを指定 (image プロパティ相当)
 FROM nvcr.io/nvidia/pytorch:25.04-py3
 
+
+# 作業ディレクトリを /app に設定
+WORKDIR /app
+
 # ───────────────────────────────
 # 1) Git をインストール
 #   feature: ghcr.io/devcontainers/features/git:1 相当
@@ -26,9 +30,13 @@ RUN pip install  --no-cache-dir fastapi
 RUN pip install  --no-cache-dir python-multipart
 RUN pip install  --no-cache-dir debugpy
 
- 
 
 
 EXPOSE 8000
 EXPOSE 5678
-CMD ["python3", "-m", "debugpy", "--listen", "0.0.0.0:5678", "-m", "uvicorn", "app:app", "--reload", "--host", "0.0.0.0", "--port", "8000"]
+
+
+
+# Dockerイメージにコピー
+COPY . .
+
